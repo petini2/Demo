@@ -11,7 +11,7 @@ var moviesRouter = require('./routes/movies');
 var app = express();
 
 var mongoose = require('mongoose');
-mongoose.connect("mongodb://127.0.0.1:27017/movies");
+mongoose.connect("mongodb://35.160.120.126:27017/movies");
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
