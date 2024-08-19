@@ -1,0 +1,36 @@
+extends ../layout 
+block content 
+    h1= title 
+    form(action='/movies/create', method='post')
+        div   
+            div
+                label(for="name") Name 
+            div
+                input(type="text", name="name", id="name")
+        div 
+            div
+                label(for="screenNo") Screen No 
+            div
+                input(type="number", name="screenNo", id="screenNo")
+        div 
+            div
+                label(for="showTime") Show Time 
+            div
+                input(type="text", name="showTime", id="showTime")
+        div 
+            div
+                label(for="availableSeats") Available Seats
+            div
+                input(type="number", name="availableSeats", id="availableSeats")
+        div 
+            div
+                label(for="actorNames") Actor/Actress Names 
+            div
+                input(type="text", name="actorNames", id="actorNames")
+        div 
+            div
+                label(for="description") Description
+            div
+                input(type="text", name="description", id="description")
+        div 
+            input(type="submit", value="Create")

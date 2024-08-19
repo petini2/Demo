@@ -1,0 +1,30 @@
+extends ../layout 
+
+block content 
+    h3 
+        a(href="/movies/create") Add New Movie
+    h1= title 
+    table(style="border: 1px solid; border-collapse: collapse")
+        thead 
+            tr
+                th(style="border: 1px solid") Name 
+                th(style="border: 1px solid") Screen No
+                th(style="border: 1px solid") Show Time 
+                th(style="border: 1px solid") Available Seats 
+                th(style="border: 1px solid") Actor/Actress Names 
+                th(style="border: 1px solid") Description 
+                th(style="border: 1px solid") Categories
+        tbody 
+            if movies != null && movies.length > 0
+                each movie in movies 
+                    tr
+                        td(width="20%",style="border: 1px solid")= movie.name 
+                        td(width="7%",style="text-align:center;border: 1px solid")= movie.screenNo
+                        td(width="10%",style="text-align:center;border: 1px solid")= movie.showTime 
+                        td(width="10%",style="text-align:center;border: 1px solid")= movie.availableSeats
+                        td(width="15%",style="border: 1px solid")= movie.actorNames 
+                        td(width="18%",style="border: 1px solid")= movie.description 
+                        td(width="15%",style="border: 1px solid")= movie.categories
+            else 
+                tr 
+                    td(colspan="7") No Data
